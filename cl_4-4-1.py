@@ -26,8 +26,6 @@ def func(a):
   else:
     return ans
 
-
-
 a=float(input())
 
 print(func(a))
