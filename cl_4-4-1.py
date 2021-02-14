@@ -1,18 +1,33 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Feb 13 19:40:57 2021
+Created on Sun Feb 14 15:23:25 2021
 
-@author:Toma Takei
+@author: Tomoki Ikegami
 """
 
-# @author:Toma Takei
-def myr(x):
-     absx = abs(x)
-     B=100*absx
-     C=B+0.5
-     ret=int(C)/100
-     return ret if x > 0 else -ret
- 
+def func(a):
+    
+  if a<0:
+     b=-a*100
+  else :
+     b=a*100 #b>0のときの処理も忘れずに。
+  
+  c=int(b)
+  d=b-c
+
+  if d>=0.5:
+    ans=c/100+(1/100)
+  else:
+    ans=c/100
+
+  if a<0:
+    return -ans
+
+  else:
+    return ans
+
+
+
 a=float(input())
 
-print(myr(a))W
+print(func(a))
